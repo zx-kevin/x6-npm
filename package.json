@@ -9,6 +9,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@antv/x6": "^2.8.0",
     "vue": "^3.2.47",
     "x6-data-driven": "^0.0.0"
   },
