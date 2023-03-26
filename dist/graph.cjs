@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("vue"),r=e.defineComponent({name:"x6Graph",inheritAttrs:!1,setup(){const t=e.ref();return()=>e.createVNode("div",{style:{width:"100%",height:"100%",position:"relative"}},[e.createTextVNode("its x6 component"),e.createVNode("div",{ref:t},null)])}});exports.Graph=r;
