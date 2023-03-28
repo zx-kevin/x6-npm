@@ -1,20 +1,36 @@
-import { defineComponent as r, ref as n, createVNode as e, createTextVNode as o } from "vue";
-const a = /* @__PURE__ */ r({
+import { defineComponent as s, ref as d, shallowReactive as l, provide as p, onMounted as h, createVNode as o } from "vue";
+import { Graph as f } from "@antv/x6";
+const m = {
+  "x6-data-driven": "_x6-data-driven_c6tag_1"
+}, u = String(Symbol("x6ContextSymbol")), y = /* @__PURE__ */ s({
   name: "x6Graph",
   inheritAttrs: !1,
-  setup() {
-    const t = n();
-    return () => e("div", {
+  setup(v, {
+    attrs: i,
+    expose: c,
+    slots: a
+  }) {
+    const {
+      ...e
+    } = i, t = d(), r = l({
+      graph: null
+    });
+    return p(u, r), c(r), h(() => {
+      Object.keys(e).forEach((n) => e[n] === "" && (e[n] = !0)), t.value && (r.graph = new f({
+        container: t.value,
+        ...e
+      }));
+    }), () => o("div", {
+      className: m["x6-data-driven"]
+    }, [o("div", {
+      ref: t,
       style: {
-        width: "100%",
-        height: "100%",
-        position: "relative"
+        height: "100%"
       }
-    }, [o("its x6 component"), e("div", {
-      ref: t
-    }, null)]);
+    }, [a.default && a.default()])]);
   }
 });
 export {
-  a as Graph
+  y as Graph,
+  u as contextSymbol
 };

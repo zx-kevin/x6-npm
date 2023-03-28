@@ -1,9 +1,11 @@
 <template>
-  <graph grid snapline keyboard clipboard ref="gRef"></graph>
+  <graph grid background snapline mousewheel panning ref="gRef">
+    <Funs></Funs>
+  </graph>
 </template>
 
 <script setup>
-import { Graph } from '@/lib/x6-data-driven'
+import { Graph, Funs } from '@/lib/x6-data-driven'
 import { ref, onMounted } from 'vue'
 
 const gRef = ref()
